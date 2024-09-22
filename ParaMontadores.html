@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <link rel="preload" href="../css/normalize.css" as="style">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="../css/montadores.css" as="style">
+    <link rel="stylesheet" href="../css/montadores.css">
+</head>
+
+<body>
+
+    <!-- Aquí va tu formulario HTML -->
+    <div class="corte">
+        <form id="presupuestoForm">
+            <div id="ventanasContainer">
+                <div class="ventana">
+                    <h4>Ventana 1</h4>
+                    <label>Ancho (mm):</label>
+                    <input type="number" class="ancho" step="1" required>
+
+                    <label>Alto (mm):</label>
+                    <input type="number" class="alto" step="1" required>
+
+                    <label>Tipo de vidrio:</label>
+                    <select class="tipoVidrio" required>
+                        <option value="simple">Simple</option>
+                        <option value="doble">Doble</option>
+                        <option value="templado">Templado</option>
+                    </select>
+
+                    <label>Tipo de marco:</label>
+                    <select class="tipoMarco" required>
+                        <option value="estándar">Estándar</option>
+                        <option value="premium">Premium</option>
+                    </select>
+
+                    <label>Tipo de ventana:</label>
+                    <select class="tipoVentana" required>
+                        <option value="practicable">Practicable</option>
+                        <option value="oscilobatiente">Oscilobatiente</option>
+                        <option value="corredera">Corredera</option>
+                    </select>
+
+                    <label>Color:</label>
+                    <select class="color" required>
+                        <option value="blanco">Blanco</option>
+                        <option value="negro">Negro</option>
+                        <option value="gris">Gris</option>
+                        <option value="personalizado">Personalizado</option>
+                    </select>
+
+                    <label>¿Necesita persianas?</label>
+                    <select class="persianas" required>
+                        <option value="no">No</option>
+                        <option value="si">Sí</option>
+                    </select>
+
+                    <label>Cantidad:</label>
+                    <input type="number" class="cantidad" required>
+                </div>
+            </div>
+            <button type="button" id="addVentana">Añadir otra ventana</button>
+            <button type="submit">Calcular Presupuesto</button>
+
+            <div id="imagenVentanaContainer">
+                <img id="imagenVentana" src="" alt="Imagen de la ventana" style="display:none; width:300px;" />
+            </div>
+        </form>
+    </div>
+
+    <div id="resultado"></div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="../js/presupuesto.js"></script>
+</body>
+
+</html>
